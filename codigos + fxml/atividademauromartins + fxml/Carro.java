@@ -2,17 +2,15 @@ package atividademauromartins;
 
 public class Carro {
     private String modelo;
-    private String combustivel; // Mudado para String
-    private String velocidade; // Mudado para String
+    private String combustivel; 
+    private String velocidade; 
 
-    // Construtor atualizado para receber String para combustivel
     public Carro(String modelo, String combustivel) {
         this.modelo = modelo;
         this.combustivel = combustivel;
         this.velocidade = "0"; // Velocidade inicializada como String
     }
 
-    // Métodos de comportamento não foram atualizados e ainda usam lógica numérica
     public void acelerar(double incremento) {
         System.out.println("Acelerando! A velocidade é um texto na classe, não posso calcular.");
     }
@@ -28,4 +26,5 @@ public class Carro {
     public String toString() {
         return "Carro -> modelo = " + modelo + ", combustivel = " + combustivel + ", velocidade = " + velocidade;
     }
+
 }
