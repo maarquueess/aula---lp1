@@ -9,12 +9,10 @@ import java.io.PrintWriter;
 
 public class Controller { // Classe renomeada para Controller
 
-    // --- Obra 1: John Lennon (Grãos de Café usa TextField) ---
     @FXML private TextField txtGraosQuantidade;
     @FXML private TextField txtGraosTipo;
     @FXML private TextField txtGraosCor;
 
-    // --- Obra 1: John Lennon (Xícara e Café Pronto usam TextArea) ---
     @FXML private TextArea txtXicaraMaterial;
     @FXML private TextArea txtXicaraCor;
     @FXML private TextArea txtXicaraCapacidade;
@@ -23,7 +21,6 @@ public class Controller { // Classe renomeada para Controller
     @FXML private TextArea txtCafeVolume;
     @FXML private TextArea txtCafeTipo;
 
-    // --- Obra 2: Medusa de Chocolate (Chocolate, Desenho, BaseDaObra usam TextArea) ---
     @FXML private TextArea txtChocolateTipo;
     @FXML private TextArea txtChocolateTextura;
     @FXML private TextArea txtChocolateRecheio;
@@ -36,7 +33,6 @@ public class Controller { // Classe renomeada para Controller
     @FXML private TextArea txtBaseCor;
     @FXML private TextArea txtBaseLargura;
 
-    // --- Método Genérico para Salvar em CSV ---
     private void salvarEmCSV(String nomeArquivo, String cabecalho, String dados) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(nomeArquivo + ".csv", true))) {
 
@@ -53,8 +49,6 @@ public class Controller { // Classe renomeada para Controller
             System.err.println("Erro ao salvar o arquivo CSV: " + e.getMessage());
         }
     }
-
-    // --- Métodos OnAction para os Botões Salvar ---
 
     @FXML
     public void handleSalvarGraosCSV() {
@@ -97,4 +91,5 @@ public class Controller { // Classe renomeada para Controller
         String dados = txtBaseMaterial.getText() + "," + txtBaseCor.getText() + "," + txtBaseLargura.getText();
         salvarEmCSV("BaseDaObra", cabecalho, dados);
     }
+
 }
