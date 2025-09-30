@@ -1,9 +1,9 @@
 package atividadevideo;
 
 public class Arco {
-    private String peso; // MUDOU PARA STRING
+    private String peso; 
     private String material;
-    private String tamanho; // MUDOU PARA STRING
+    private String tamanho; 
     private Flecha flechaCarregada;
 
     // Construtor atualizado
@@ -14,14 +14,14 @@ public class Arco {
     }
 
 
-    public String getPeso() { return peso; } // Retorna String
-    public void setPeso(String peso) { this.peso = peso; } // Recebe String
+    public String getPeso() { return peso; } 
+    public void setPeso(String peso) { this.peso = peso; } 
 
     public String getMaterial() { return material; }
     public void setMaterial(String material) { this.material = material; }
 
-    public String getTamanho() { return tamanho; } // Retorna String
-    public void setTamanho(String tamanho) { this.tamanho = tamanho; } // Recebe String
+    public String getTamanho() { return tamanho; } 
+    public void setTamanho(String tamanho) { this.tamanho = tamanho; } 
 
     public Flecha getFlechaCarregada() { return flechaCarregada; }
 
@@ -29,7 +29,6 @@ public class Arco {
         System.out.println("Arco: corda puxada.");
     }
 
-    // Método ajustar atualizado para receber String
     public void ajustar(String novoTamanho) {
         setTamanho(novoTamanho);
         System.out.println("Arco ajustado para tamanho: " + novoTamanho);
@@ -59,4 +58,5 @@ public class Arco {
                 ", tamanho = " + tamanho;
 
     }
+
 }
