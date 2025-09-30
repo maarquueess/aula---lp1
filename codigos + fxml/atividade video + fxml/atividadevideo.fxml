@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atividadevideo.Controller">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Arco">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane layoutX="62.0" layoutY="41.0" prefHeight="115.0" prefWidth="251.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Peso" />
+                                        <Label text="Material" GridPane.rowIndex="1" />
+                                        <Label text="Tamanho" GridPane.rowIndex="2" />
+                                        <TextField fx:id="txtArcoPeso" GridPane.columnIndex="1" />
+                                        <TextField fx:id="txtArcoMaterial" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TextField fx:id="txtArcoTamanho" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    </children>
+                                </GridPane>
+                                <Button layoutX="148.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleSalvarArcoCSV" text="Salvar" />
+                                <Label fx:id="lblStatusArco" layoutX="120.0" layoutY="220.0">
+                                    <textFill>
+                                        <Color red="0.0" green="0.8" blue="0.0" />
+                                    </textFill>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Flecha">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane layoutX="75.0" layoutY="50.0" prefHeight="101.0" prefWidth="216.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Comprimento" />
+                                        <Label text="Material" GridPane.rowIndex="1" />
+                                        <Label text="Cor" GridPane.rowIndex="2" />
+                                        <TextField fx:id="txtFlechaComprimento" GridPane.columnIndex="1" />
+                                        <TextField fx:id="txtFlechaMaterial" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TextField fx:id="txtFlechaCor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    </children>
+                                </GridPane>
+                                <Button layoutX="148.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleSalvarFlechaCSV" text="Salvar" />
+                                <Label fx:id="lblStatusFlecha" layoutX="120.0" layoutY="220.0">
+                                    <textFill>
+                                        <Color red="0.0" green="0.8" blue="0.0" />
+                                    </textFill>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Relógio">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane layoutX="71.0" layoutY="50.0" prefHeight="101.0" prefWidth="216.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Fonte" />
+                                        <Label text="Formato" GridPane.rowIndex="1" />
+                                        <Label text="Cor" GridPane.rowIndex="2" />
+                                        <TextField fx:id="txtRelogioFonte" GridPane.columnIndex="1" />
+                                        <TextField fx:id="txtRelogioFormato" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TextField fx:id="txtRelogioCor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    </children>
+                                </GridPane>
+                                <Button layoutX="148.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleSalvarRelogioCSV" text="Salvar" />
+                                <Label fx:id="lblStatusRelogio" layoutX="120.0" layoutY="220.0">
+                                    <textFill>
+                                        <Color red="0.0" green="0.8" blue="0.0" />
+                                    </textFill>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
