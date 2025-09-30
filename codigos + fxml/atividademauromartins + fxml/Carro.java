@@ -8,7 +8,7 @@ public class Carro {
     public Carro(String modelo, String combustivel) {
         this.modelo = modelo;
         this.combustivel = combustivel;
-        this.velocidade = "0"; // Velocidade inicializada como String
+        this.velocidade = "0"; 
     }
 
     public void acelerar(double incremento) {
@@ -28,3 +28,4 @@ public class Carro {
     }
 
 }
+
