@@ -8,23 +8,19 @@ import javafx.scene.control.TextField;
 
 public class Controller {
 
-    // --- Campos da Xícara ---
     @FXML private TextField txtXicaraTemperatura;
     @FXML private TextField txtXicaraCor;
     @FXML private TextField txtXicaraCapacidade;
 
-    // --- Campos do Celular ---
     @FXML private TextField txtCelularMarca;
     @FXML private TextField txtCelularBateria;
     @FXML private TextField txtCelularCor;
 
-    // --- Campos do Carro ---
     @FXML private TextField txtCarroModelo;
     @FXML private TextField txtCarroCombustivel;
     @FXML private TextField txtCarroVelocidade;
 
 
-    // --- 1. Ação para Salvar Xícara ---
     @FXML
     private void handleSalvarXicaraCSV() {
         String temperatura = txtXicaraTemperatura.getText();
@@ -36,17 +32,14 @@ public class Controller {
             return;
         }
 
-        // Cria o objeto Xicara com as Strings
         Xicara xicara = new Xicara(temperatura, cor, capacidade);
 
-        // Salva no arquivo CSV
         String dadosCSV = temperatura + "," + cor + "," + capacidade + "\n";
         salvarDados(dadosCSV, "xicaras.csv", "Temperatura,Cor,Capacidade\n");
 
         limparXicara();
     }
 
-    // --- 2. Ação para Salvar Celular ---
     @FXML
     private void handleSalvarCelularCSV() {
         String marca = txtCelularMarca.getText();
@@ -58,17 +51,14 @@ public class Controller {
             return;
         }
 
-        // Cria o objeto Celular com as Strings (apenas Marca e Cor no construtor)
         Celular celular = new Celular(marca, cor);
 
-        // Salva no arquivo CSV com todos os dados da UI
         String dadosCSV = marca + "," + bateria + "," + cor + "\n";
         salvarDados(dadosCSV, "celulares.csv", "Marca,Bateria,Cor\n");
 
         limparCelular();
     }
 
-    // --- 3. Ação para Salvar Carro ---
     @FXML
     private void handleSalvarCarroCSV() {
         String modelo = txtCarroModelo.getText();
@@ -80,27 +70,22 @@ public class Controller {
             return;
         }
 
-        // Cria o objeto Carro com as Strings (apenas Modelo e Combustível no construtor)
         Carro carro = new Carro(modelo, combustivel);
 
-        // Salva no arquivo CSV com todos os dados da UI
         String dadosCSV = modelo + "," + combustivel + "," + velocidade + "\n";
         salvarDados(dadosCSV, "carros.csv", "Modelo,Combustivel,Velocidade\n");
 
         limparCarro();
     }
 
-    // --- Lógica Comum de Salvamento e Limpeza ---
 
     private void salvarDados(String dados, String nomeArquivo, String cabecalho) {
         try (FileWriter writer = new FileWriter(nomeArquivo, true)) {
-            // Verifica se o arquivo está vazio para escrever o cabeçalho
             java.io.File file = new java.io.File(nomeArquivo);
             if (file.length() == 0) {
                 writer.write(cabecalho);
             }
 
-            // Escreve os dados do novo objeto
             writer.write(dados);
 
             mostrarAlerta(Alert.AlertType.INFORMATION, "Sucesso", "Dados salvos com sucesso em " + nomeArquivo);
@@ -136,4 +121,5 @@ public class Controller {
         txtCarroCombustivel.clear();
         txtCarroVelocidade.clear();
     }
+
 }
