@@ -10,7 +10,6 @@ public class MainFX extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        // O FXMLLoader carrega o arquivo FXML e instancia o Controller
         Parent root = FXMLLoader.load(getClass().getResource("atividademauromartins.fxml"));
 
         primaryStage.setTitle("Cadastro de Objetos");
@@ -22,4 +21,5 @@ public class MainFX extends Application {
         // Lança a aplicação JavaFX
         launch(args);
     }
+
 }
