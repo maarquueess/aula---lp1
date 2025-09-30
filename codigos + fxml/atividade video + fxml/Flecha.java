@@ -1,19 +1,18 @@
 package atividadevideo;
 
 public class Flecha {
-    private String comprimento;  // MUDOU PARA STRING
+    private String comprimento; 
     private String material;
     private String cor;
 
-    // Construtor atualizado
     public Flecha(String comprimento, String material, String cor) {
         this.comprimento = comprimento;
         this.material = material;
         this.cor = cor;
     }
 
-    public String getComprimento() { return comprimento; } // Retorna String
-    public void setComprimento(String comprimento) { this.comprimento = comprimento; } // Recebe String
+    public String getComprimento() { return comprimento; } 
+    public void setComprimento(String comprimento) { this.comprimento = comprimento; } 
 
     public String getMaterial() { return material; }
     public void setMaterial(String material) { this.material = material; }
@@ -39,4 +38,5 @@ public class Flecha {
                 ", material = " + material +
                 ", cor = " + cor;
     }
+
 }
