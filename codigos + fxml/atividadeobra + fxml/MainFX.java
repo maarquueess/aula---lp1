@@ -8,12 +8,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainFX extends Application { // Must extend Application
+public class MainFX extends Application { 
 
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        // Use the relative path since your MainFX class and FXML file are in the same package (atividadeobra)
         FXMLLoader loader = new FXMLLoader(getClass().getResource("atividadeobra.fxml"));
 
         Parent root = loader.load();
@@ -23,8 +22,8 @@ public class MainFX extends Application { // Must extend Application
         primaryStage.show();
     }
 
-    // REQUIRED: This is the standard Java entry point that initializes the JavaFX framework.
     public static void main(String[] args) {
         launch(args); // Calls the start() method
     }
+
 }
